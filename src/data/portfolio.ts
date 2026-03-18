@@ -29,9 +29,9 @@ export const navLinks = [
 
 export const aboutData = {
   summary: [
-    "I'm a final-year Computer Science and Engineering student at BRAC University with a focused interest in Machine Learning and Artificial Intelligence. I enjoy building practical, data-driven solutions — from recommendation engines and predictive models to computer vision systems and AI-powered chatbots.",
+    "I'm a final-year Computer Science and Engineering student at BRAC University with a focused interest in Machine Learning and Artificial Intelligence. I enjoy building practical, data-driven solutions from recommendation engines and predictive models to computer vision systems and AI-powered chatbots.",
     "My hands-on experience spans ML model development, data annotation for production AI systems, full-stack web development, and participation in Kaggle competitions. I approach every project with a builder's mindset: understand the problem, design the solution, ship it.",
-    "Currently, I'm working on my thesis — a Smart Irrigation Advisory System that uses Agentic RAG to help farmers make water-efficient crop cultivation decisions. This research sits at the intersection of AI and agriculture, an area where technology can drive real-world impact.",
+    "Currently, I'm working on my thesis, a Smart Irrigation Advisory System that uses Agentic RAG to help farmers make water-efficient crop cultivation decisions. This research sits at the intersection of AI and agriculture, an area where technology can drive real-world impact.",
   ],
   highlights: [
     "Machine Learning & AI model development",
@@ -60,7 +60,7 @@ export const skillCategories = [
   },
   {
     title: "Languages",
-    skills: ["Python", "SQL", "JavaScript", "TypeScript", "Verilog"],
+    skills: ["Python", "SQL", "Verilog","RiSC-V"],
   },
   {
     title: "Data & Analytics",
@@ -109,7 +109,7 @@ export const experiences = [
     type: "Contract",
     period: "June 2024 – January 2025",
     description: [
-      "Annotated and labeled diverse datasets — text, images, and structured data — to train machine learning models with high accuracy standards.",
+      "Annotated and labeled diverse datasets including text, images, and structured data to train machine learning models with high accuracy standards.",
       "Collaborated directly with data science teams to ensure data relevance, consistency, and model compatibility across multiple annotation projects.",
       "Identified bottlenecks in annotation workflows and suggested improvements that increased team efficiency and output quality.",
     ],
@@ -131,7 +131,7 @@ export const experiences = [
 
 export const projects = [
   {
-    title: "MEdiBot — Medical ChatBot",
+    title: "MEdiBot Medical ChatBot",
     description:
       "An AI-powered medical chatbot using Retrieval-Augmented Generation (RAG) that answers health-related queries with context-aware, evidence-based responses. Reduces hallucination through vector-search-based document retrieval.",
     techStack: ["Python", "LangChain", "VectorDB", "LLMs", "RAG"],
@@ -145,7 +145,7 @@ export const projects = [
     featured: true,
   },
   {
-    title: "GlamNet — Smart Salon Network",
+    title: "GlamNet Smart Salon Network",
     description:
       "A full-stack MERN web platform connecting customers with salons and barbers across Dhaka through smart service discovery, real-time availability, and online appointment booking.",
     techStack: ["MongoDB", "Express.js", "React", "Node.js"],
@@ -240,7 +240,7 @@ export const achievements = [
       "Participated in the Data Visualization Competition at the 6th Bangladesh Economics Summit, demonstrating skills in data storytelling and visual analytics.",
   },
   {
-    title: "Internship Completion — ScholarTrack AI",
+    title: "Internship Completion ScholarTrack AI",
     issuer: "ScholarTrack AI",
     description:
       "Successfully completed internship with recognition for dedication, professionalism, and meaningful contributions to data collection projects.",
