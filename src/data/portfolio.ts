@@ -24,6 +24,8 @@ export const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
+  { label: "Achievements", href: "#achievements" },
+  { label: "Research", href: "#research" },
   { label: "Contact", href: "#contact" },
 ] as const;
 
@@ -125,6 +127,19 @@ export const experiences = [
       "Developed and executed web scraping pipelines to collect and structure academic data for the ScholarTrack AI platform.",
       "Demonstrated strong analytical and problem-solving skills, contributing meaningfully to assigned data collection projects.",
       "Collaborated effectively with the team under supervision of the CEO, earning recognition for dedication and professionalism.",
+    ],
+  },
+  {
+    title: "AI Intern",
+    company: "FlyRank",
+    companyUrl: "https://flyrank.ai/",
+    location: "Remote",
+    type: "Internship",
+    period: "July 2026 – January 2027",
+    description: [
+      "Learning to use artificial intelligence as a practical co-pilot rather than a replacement for busywork, applying it to build portfolio-worthy projects end to end.",
+      "Running AI-assisted marketing experiments to understand how automation and content generation can drive organic growth.",
+      "Writing and shipping code faster by pairing with AI tools throughout the development workflow, from prototyping to deployment.",
     ],
   },
 ] as const;
@@ -244,5 +259,39 @@ export const achievements = [
     issuer: "ScholarTrack AI",
     description:
       "Successfully completed internship with recognition for dedication, professionalism, and meaningful contributions to data collection projects.",
+  },
+  {
+    title: "AMD Developers Hackathon",
+    issuer: "AMD",
+    description:
+      "Participated in the AMD Developers Hackathon, collaborating on AI-driven solutions and gaining hands-on experience with high-performance computing tools.",
+  },
+  {
+    title: "Infinity AI Hackathon",
+    issuer: "Dhaka",
+    description:
+      "Participated in the Infinity AI Hackathon in Dhaka, building AI-powered solutions under time constraints alongside fellow developers and researchers.",
+  },
+] as const;
+
+export const research = [
+  {
+    title:
+      "Cross-Dataset Generalization of Bangladeshi Rice Leaf Disease Classifiers: Benchmark, Diagnosis, and Mitigation",
+    authors: "Anindya Paul",
+    affiliation: "BRAC University",
+    date: "August 2026",
+    doi: "10.5281/zenodo.21787018",
+    doiUrl: "https://doi.org/10.5281/zenodo.21787018",
+    zenodoUrl: "https://zenodo.org/records/21787018",
+    githubUrl: "https://github.com/ShishiMaru81/Research_CV",
+    description:
+      "A benchmark study examining how deep learning models for rice leaf disease classification degrade when applied across different datasets. The research normalized three Bangladesh-based datasets and evaluated MobileNetV2, EfficientNet-B0, and ResNet50 across dataset combinations to diagnose and mitigate the generalization gap.",
+    findings: [
+      "In-dataset performance reaches 0.719 macro-F1, but drops to 0.436 cross-dataset",
+      "Data augmentation improved cross-dataset performance to 0.503 macro-F1",
+      "Background randomization accounted for most of the performance recovery",
+    ],
+    tags: ["Computer Vision", "Deep Learning", "Agricultural AI", "Benchmarking"],
   },
 ] as const;

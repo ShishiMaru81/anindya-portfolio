@@ -9,6 +9,7 @@ import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Education } from "@/components/sections/education";
 import { Achievements } from "@/components/sections/achievements";
+import { Research } from "@/components/sections/research";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <Projects />
         <Education />
         <Achievements />
+        <Research />
         <Contact />
       </main>
       <Footer />
