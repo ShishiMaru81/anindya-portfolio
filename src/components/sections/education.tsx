@@ -50,16 +50,6 @@ export function Education() {
                       <p className="text-sm font-medium text-foreground mt-1">
                         {edu.grade}
                       </p>
-                      {"thesis" in edu && edu.thesis && (
-                        <div className="mt-3 p-3 rounded-lg bg-muted/50 border border-border">
-                          <p className="text-xs font-medium text-muted-foreground mb-1">
-                            Thesis
-                          </p>
-                          <p className="text-sm text-foreground italic">
-                            &quot;{edu.thesis}&quot;
-                          </p>
-                        </div>
-                      )}
                     </div>
                   </div>
                 </div>

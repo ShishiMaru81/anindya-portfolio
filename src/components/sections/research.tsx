@@ -1,6 +1,12 @@
 "use client";
 
-import { FlaskConical, ExternalLink, Github, Calendar } from "lucide-react";
+import {
+  FlaskConical,
+  ExternalLink,
+  FileText,
+  Github,
+  Calendar,
+} from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import {
   AnimatedStagger,
@@ -28,7 +34,7 @@ export function Research() {
                     <div className="flex items-center gap-2 mb-2">
                       <FlaskConical className="w-4 h-4 text-primary flex-shrink-0" />
                       <span className="text-xs px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium">
-                        Preprint
+                        {paper.type}
                       </span>
                     </div>
                     <h3 className="text-lg font-semibold text-foreground leading-snug">
@@ -77,24 +83,50 @@ export function Research() {
 
                 {/* Links */}
                 <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-border text-sm">
-                  <a
-                    href={paper.doiUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-primary hover:underline font-medium"
-                  >
-                    <ExternalLink className="w-3.5 h-3.5" />
-                    DOI: {paper.doi}
-                  </a>
-                  <a
-                    href={paper.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Github className="w-3.5 h-3.5" />
-                    Source Code
-                  </a>
+                  {"doiUrl" in paper && (
+                    <a
+                      href={paper.doiUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-primary hover:underline font-medium"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      DOI: {paper.doi}
+                    </a>
+                  )}
+                  {"arxivUrl" in paper && (
+                    <a
+                      href={paper.arxivUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-primary hover:underline font-medium"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      arXiv preprint
+                    </a>
+                  )}
+                  {"pdfUrl" in paper && (
+                    <a
+                      href={paper.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-primary hover:underline font-medium"
+                    >
+                      <FileText className="w-3.5 h-3.5" />
+                      IEEE PDF
+                    </a>
+                  )}
+                  {"githubUrl" in paper && (
+                    <a
+                      href={paper.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Github className="w-3.5 h-3.5" />
+                      Source Code
+                    </a>
+                  )}
                 </div>
               </div>
             </AnimatedStaggerChild>

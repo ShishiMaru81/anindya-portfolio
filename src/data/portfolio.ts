@@ -222,8 +222,6 @@ export const education = [
     location: "Dhaka, Bangladesh",
     period: "2022 – 2026 (Expected)",
     grade: "CGPA: 3.23 / 4.00",
-    thesis:
-      "Smart Irrigation Advisory System Using Agentic RAG for Water-Efficient Crop Cultivation",
   },
   {
     degree: "Higher Secondary Certificate (HSC)",
@@ -276,13 +274,15 @@ export const achievements = [
 
 export const research = [
   {
+    type: "Preprint",
     title:
       "Cross-Dataset Generalization of Bangladeshi Rice Leaf Disease Classifiers: Benchmark, Diagnosis, and Mitigation",
     authors: "Anindya Paul",
     affiliation: "BRAC University",
     date: "August 2026",
-    doi: "10.5281/zenodo.21787018",
-    doiUrl: "https://doi.org/10.5281/zenodo.21787018",
+    doi: "10.48550/arXiv.2609.31709",
+    doiUrl: "https://doi.org/10.48550/arXiv.2609.31709",
+    arxivUrl: "https://arxiv.org/abs/2609.31709",
     zenodoUrl: "https://zenodo.org/records/21787018",
     githubUrl: "https://github.com/ShishiMaru81/Research_CV",
     description:
@@ -293,5 +293,23 @@ export const research = [
       "Background randomization accounted for most of the performance recovery",
     ],
     tags: ["Computer Vision", "Deep Learning", "Agricultural AI", "Benchmarking"],
+  },
+  {
+    type: "Thesis / Journal Version",
+    title:
+      "Fine-Tuning Creates Confident Errors: Clarification Failure in Bengali–English Agricultural Question Answering",
+    authors:
+      "Awsaf Muntakim, Abdullah Ahnaf Tahmid, Sadman Hossain, Anindya Paul, and Chinmoy Bhowmick Ratul",
+    affiliation: "BRAC University",
+    date: "October 2026",
+    pdfUrl: "/research/Thesis_IEEE_Journal_Version.pdf",
+    description:
+      "A bilingual Bengali–English agricultural question-answering study examining how fine-tuning affects clarification, abstention, and confident errors when irrigation queries are missing required runtime information.",
+    findings: [
+      "Fine-tuning improved numeric irrigation-answering performance across four open-weight language models",
+      "Fine-tuned models produced confident invented values on nearly all incomplete queries",
+      "Adding 300 clarification examples increased clarification while reducing invented values without detectable numeric-accuracy loss",
+    ],
+    tags: ["NLP", "Large Language Models", "Agricultural AI", "Bengali–English"],
   },
 ] as const;
