@@ -16,9 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anindya Paul — Machine Learning & AI Enthusiast",
+  title: "Anindya Paul — Applied ML, AI Integration & Backend Development",
   description:
-    "Portfolio of Anindya Paul — Computer Science student specializing in Machine Learning, AI, and data-driven solutions. Explore projects, experience, and research.",
+    "Anindya Paul, Computer Science student at BRAC University. Explore applied ML projects, AI integration, backend development, and agricultural AI research.",
   keywords: [
     "Anindya Paul",
     "Machine Learning",
@@ -34,16 +34,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Anindya Paul — Machine Learning & AI Enthusiast",
+    title: "Anindya Paul — Applied ML, AI Integration & Backend Development",
     description:
-      "Computer Science student specializing in Machine Learning, AI, and data-driven solutions.",
+      "Computer Science student building applied ML, computer vision, and backend projects.",
     siteName: "Anindya Paul Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anindya Paul — Machine Learning & AI Enthusiast",
+    title: "Anindya Paul — Applied ML, AI Integration & Backend Development",
     description:
-      "Computer Science student specializing in Machine Learning, AI, and data-driven solutions.",
+      "Computer Science student building applied ML, computer vision, and backend projects.",
   },
   robots: {
     index: true,

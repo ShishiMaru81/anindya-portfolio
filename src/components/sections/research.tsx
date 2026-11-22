@@ -20,8 +20,8 @@ export function Research() {
       <div className="container-custom">
         <SectionHeading
           label="Research"
-          title="Publications"
-          description="Academic research exploring the intersection of AI and real-world impact."
+          title="Research & preprints"
+          description="Agricultural question answering and cross-dataset computer vision, with source code and manuscript links."
         />
 
         <AnimatedStagger className="max-w-3xl mx-auto space-y-6">

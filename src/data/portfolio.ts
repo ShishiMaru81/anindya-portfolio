@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "Anindya Paul",
-  title: "ML & AI Enthusiast",
-  headline: "Building intelligent solutions with data and code.",
+  title: "Computer Science Student · Applied ML & AI",
+  headline: "Applied ML, computer vision, and backend engineering.",
   description:
-    "Final-year Computer Science student at BRAC University, specializing in Machine Learning, AI, and data-driven applications. I turn complex problems into practical, impactful solutions.",
+    "I build applied AI and computer vision projects, with hands-on work in AI integration and backend development. Final-year Computer Science student at BRAC University, open to internships and junior engineering roles.",
   email: "paulanindya2001@gmail.com",
   phone: "+8801537081691",
   location: "Dhaka, Bangladesh",
@@ -19,31 +19,28 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
+  { label: "Projects", href: "#projects" },
+  { label: "Research", href: "#research" },
+  { label: "Experience", href: "#experience" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Research", href: "#research" },
+  { label: "Activities", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ] as const;
 
 export const aboutData = {
   summary: [
-    "I'm a final-year Computer Science and Engineering student at BRAC University with a focused interest in Machine Learning and Artificial Intelligence. I enjoy building practical, data-driven solutions from recommendation engines and predictive models to computer vision systems and AI-powered chatbots.",
-    "My hands-on experience spans ML model development, data annotation for production AI systems, full-stack web development, and participation in Kaggle competitions. I approach every project with a builder's mindset: understand the problem, design the solution, ship it.",
-    "Currently, I'm working on my thesis, a Smart Irrigation Advisory System that uses Agentic RAG to help farmers make water-efficient crop cultivation decisions. This research sits at the intersection of AI and agriculture, an area where technology can drive real-world impact.",
+    "I'm a final-year Computer Science and Engineering student at BRAC University. My interests sit where machine learning meets software: connecting models to applications and making their outputs useful to people.",
+    "My project work includes AI integration for agricultural tools and local log analysis, backend development for a salon-booking platform, and a solo traffic-video analysis project. My research explores Bengali–English agricultural question answering and how models respond when information is missing.",
   ],
   highlights: [
-    "Machine Learning & AI model development",
-    "Computer Vision (YOLOv8, OpenCV)",
-    "Retrieval-Augmented Generation (RAG)",
-    "Full-stack development (MERN, Streamlit)",
-    "Data annotation & analysis at scale",
-    "Research in applied AI for agriculture",
+    "AI integration and local language models",
+    "Computer vision and video analysis",
+    "Python and backend development",
+    "Applied AI research in agriculture",
   ],
-  goal: "My goal is to strengthen my expertise in machine learning engineering and applied AI while pursuing advanced research and graduate studies in Data Science.",
+  goal: "I'm looking for internship and junior roles in applied ML, AI integration, and backend engineering, while building toward graduate research in Data Science.",
 } as const;
 
 export const skillCategories = [
@@ -62,7 +59,7 @@ export const skillCategories = [
   },
   {
     title: "Languages",
-    skills: ["Python", "SQL", "Verilog","RiSC-V"],
+    skills: ["Python", "SQL", "Verilog", "RISC-V"],
   },
   {
     title: "Data & Analytics",
@@ -104,16 +101,15 @@ export const skillCategories = [
 
 export const experiences = [
   {
-    title: "Data Labeler",
-    company: "Sapien.io",
-    companyUrl: "https://www.sapien.io/",
-    location: "San Francisco, CA (Remote)",
-    type: "Contract",
-    period: "June 2024 – January 2025",
+    title: "AI Intern",
+    company: "FlyRank",
+    companyUrl: "https://flyrank.ai/",
+    location: "Remote",
+    type: "Internship",
+    period: "July 2026 – Present",
     description: [
-      "Annotated and labeled diverse datasets including text, images, and structured data to train machine learning models with high accuracy standards.",
-      "Collaborated directly with data science teams to ensure data relevance, consistency, and model compatibility across multiple annotation projects.",
-      "Identified bottlenecks in annotation workflows and suggested improvements that increased team efficiency and output quality.",
+      "Build and iterate on projects with AI-assisted development tools, from prototyping through implementation.",
+      "Explore AI-assisted marketing and content experiments alongside practical software development.",
     ],
   },
   {
@@ -124,110 +120,21 @@ export const experiences = [
     type: "Internship",
     period: "July 2025 – August 2025",
     description: [
-      "Developed and executed web scraping pipelines to collect and structure academic data for the ScholarTrack AI platform.",
-      "Demonstrated strong analytical and problem-solving skills, contributing meaningfully to assigned data collection projects.",
-      "Collaborated effectively with the team under supervision of the CEO, earning recognition for dedication and professionalism.",
+      "Developed web-scraping pipelines to collect and structure academic data for the ScholarTrack AI platform.",
+      "Worked with the team to review collected data and resolve collection issues.",
     ],
   },
   {
-    title: "AI Intern",
-    company: "FlyRank",
-    companyUrl: "https://flyrank.ai/",
-    location: "Remote",
-    type: "Internship",
-    period: "July 2026 – January 2027",
+    title: "Data Labeler",
+    company: "Sapien.io",
+    companyUrl: "https://www.sapien.io/",
+    location: "San Francisco, CA (Remote)",
+    type: "Contract",
+    period: "June 2024 – January 2025",
     description: [
-      "Learning to use artificial intelligence as a practical co-pilot rather than a replacement for busywork, applying it to build portfolio-worthy projects end to end.",
-      "Running AI-assisted marketing experiments to understand how automation and content generation can drive organic growth.",
-      "Writing and shipping code faster by pairing with AI tools throughout the development workflow, from prototyping to deployment.",
+      "Annotated text, image, and structured datasets for machine-learning workflows.",
+      "Collaborated with data-science teams on label consistency and dataset quality.",
     ],
-  },
-] as const;
-
-export const projects = [
-  {
-    title: "AgroSphere AI",
-    description:
-      "A bilingual agricultural workspace combining crop-photo screening, rainfall preparedness, market comparisons, and harvest planning for farmers in Bangladesh.",
-    techStack: ["Next.js", "TypeScript", "FastAPI", "PyTorch", "PostgreSQL"],
-    features: [
-      "Crop-photo screening with vision models and local model fallback",
-      "Location-based weather and rainfall preparedness",
-      "Farm management and harvest decision snapshots",
-      "Marketplace prototype with fixed-price listings and auctions",
-    ],
-    github: "https://github.com/ShishiMaru81/AI-BUILDERS-",
-    featured: true,
-  },
-  {
-    title: "Tracewatch — Local AI Log Analyzer",
-    description:
-      "A local security log analyzer that combines a small language model with event correlation to produce deduplicated findings backed by original log lines. Analysis runs without cloud AI services.",
-    techStack: ["Python", "FastAPI", "Qwen2.5", "llama.cpp", "SQLite"],
-    features: [
-      "Local CPU inference with a quantized language model",
-      "Token-aware chunking and checkpointed analysis",
-      "Security event correlation across log entries",
-      "Deduplicated reports with source-line evidence",
-    ],
-    github: "https://github.com/ShishiMaru81/TraceWatch---Local-Log-Analyzer-",
-    featured: true,
-  },
-  {
-    title: "Traffic Accident Detection",
-    description:
-      "A computer vision prototype that combines a custom YOLOv8 crash detector with vehicle detection to annotate road videos and estimate traffic density.",
-    techStack: ["Python", "YOLOv8", "OpenCV", "Ultralytics"],
-    features: [
-      "Crash detection using custom-trained YOLOv8 weights",
-      "Vehicle counts for common road users",
-      "Traffic density estimates from detected vehicle counts",
-      "Annotated video output with accident status overlays",
-    ],
-    github: "https://github.com/ShishiMaru81/smart-traffic-accident-detector",
-    featured: true,
-  },
-  {
-    title: "GlamNet — Smart Salon Network",
-    description:
-      "A full-stack salon booking platform built with the MERN stack, bringing together service discovery, appointment scheduling, customer reviews, and salon management.",
-    techStack: ["MongoDB", "Express.js", "React", "Node.js", "JWT"],
-    features: [
-      "Salon discovery and service recommendations",
-      "Appointment booking and staff schedule management",
-      "Customer reviews with sentiment analysis",
-      "Authenticated customer and salon workflows",
-    ],
-    github: "https://github.com/ShishiMaru81/GlamNet",
-    featured: true,
-  },
-  {
-    title: "CineSuggest — Movie Recommendations",
-    description:
-      "A content-based movie recommender that uses TF-IDF features and cosine similarity to find related films through an interactive Streamlit interface.",
-    techStack: ["Python", "Scikit-learn", "Streamlit", "Pandas"],
-    features: [
-      "Movie metadata vectorization with TF-IDF",
-      "Content similarity ranking with cosine similarity",
-      "Approximate title matching for user input",
-      "Interactive movie search and recommendations",
-    ],
-    github: "https://github.com/ShishiMaru81/CineSuggest",
-    featured: false,
-  },
-  {
-    title: "Smart Object Detection & Tracking",
-    description:
-      "A YOLOv8 computer vision project for detecting and tracking objects in webcam feeds and video files, with class labels, confidence scores, and visual annotations.",
-    techStack: ["Python", "YOLOv8", "OpenCV", "cvzone", "SORT"],
-    features: [
-      "Object detection from webcam feeds and video files",
-      "Bounding boxes with class labels and confidence scores",
-      "Multi-frame object tracking with SORT",
-      "FPS display for monitoring processing speed",
-    ],
-    github: "https://github.com/ShishiMaru81/Smart-Object-Detection-YOLOv8",
-    featured: false,
   },
 ] as const;
 
@@ -260,31 +167,31 @@ export const achievements = [
     title: "Kaggle Competition Modeler",
     issuer: "Kaggle",
     description:
-      "Earned the Competition Modeler badge for participating in and building models for Kaggle machine learning competitions.",
+      "Built models for Kaggle competitions and earned the Competition Modeler badge.",
   },
   {
     title: "Data Visualization Competition",
     issuer: "6th Bangladesh Economics Summit 2025",
     description:
-      "Participated in the Data Visualization Competition at the 6th Bangladesh Economics Summit, demonstrating skills in data storytelling and visual analytics.",
+      "Participated in the 2025 Data Visualization Competition at the Bangladesh Economics Summit.",
   },
   {
     title: "Internship Completion ScholarTrack AI",
     issuer: "ScholarTrack AI",
     description:
-      "Successfully completed internship with recognition for dedication, professionalism, and meaningful contributions to data collection projects.",
+      "Completed the ScholarTrack AI web-scraping internship.",
   },
   {
     title: "AMD Developers Hackathon",
     issuer: "AMD",
     description:
-      "Participated in the AMD Developers Hackathon, collaborating on AI-driven solutions and gaining hands-on experience with high-performance computing tools.",
+      "Participated in the AMD Developers Hackathon with an AI project team.",
   },
   {
     title: "Infinity AI Hackathon",
     issuer: "Dhaka",
     description:
-      "Participated in the Infinity AI Hackathon in Dhaka, building AI-powered solutions under time constraints alongside fellow developers and researchers.",
+      "Participated in the Infinity AI Hackathon in Dhaka as part of a project team.",
   },
 ] as const;
 

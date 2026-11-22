@@ -6,7 +6,7 @@ import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Skills } from "@/components/sections/skills";
 import { Experience } from "@/components/sections/experience";
-import { Projects } from "@/components/sections/projects";
+import { Projects } from "@/components/sections/project-gallery";
 import { Education } from "@/components/sections/education";
 import { Achievements } from "@/components/sections/achievements";
 import { Research } from "@/components/sections/research";
@@ -18,13 +18,13 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Projects />
+        <Research />
+        <Experience />
         <About />
         <Skills />
-        <Experience />
-        <Projects />
         <Education />
         <Achievements />
-        <Research />
         <Contact />
       </main>
       <Footer />

@@ -14,8 +14,8 @@ export function Experience() {
       <div className="container-custom">
         <SectionHeading
           label="Experience"
-          title="Where I've Worked"
-          description="Professional experience that has shaped my skills and perspective."
+          title="Experience"
+          description="Internships and hands-on work, most recent first."
         />
 
         <AnimatedStagger className="max-w-3xl mx-auto space-y-6">

@@ -1,18 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
-import { motion, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import Image from "next/image";
 import { siteConfig } from "@/data/portfolio";
-
-const roles = [
-  "ML & AI Enthusiast",
-  "Computer Vision Developer",
-  "Data-Driven Problem Solver",
-  "Full-Stack Builder",
-  "Research-Oriented Thinker",
-];
 
 function useMousePosition() {
   const x = useMotionValue(0);
@@ -94,52 +86,14 @@ function GridBackground() {
   );
 }
 
-function TypewriterRole() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [displayText, setDisplayText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  useEffect(() => {
-    const current = roles[currentIndex];
-    let timeout: ReturnType<typeof setTimeout>;
-
-    if (!isDeleting && displayText === current) {
-      timeout = setTimeout(() => setIsDeleting(true), 2000);
-    } else if (isDeleting && displayText === "") {
-      setIsDeleting(false);
-      setCurrentIndex((prev) => (prev + 1) % roles.length);
-    } else {
-      const speed = isDeleting ? 30 : 60;
-      timeout = setTimeout(() => {
-        setDisplayText(
-          isDeleting
-            ? current.substring(0, displayText.length - 1)
-            : current.substring(0, displayText.length + 1)
-        );
-      }, speed);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentIndex]);
-
-  return (
-    <span className="gradient-text">
-      {displayText}
-      <motion.span
-        animate={{ opacity: [1, 0] }}
-        transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
-        className="inline-block w-[3px] h-[1em] bg-primary ml-0.5 align-middle"
-      />
-    </span>
-  );
-}
-
 function LetterReveal({ text, className, delay = 0 }: { text: string; className?: string; delay?: number }) {
   return (
     <span className={className}>
+      <span className="sr-only">{text}</span>
       {text.split("").map((char, i) => (
         <motion.span
           key={i}
+          aria-hidden="true"
           initial={{ opacity: 0, y: 40, rotateX: -90 }}
           animate={{ opacity: 1, y: 0, rotateX: 0 }}
           transition={{
@@ -293,10 +247,9 @@ export function Hero() {
               />
             </h1>
 
-            {/* Typewriter role */}
-            <div className="text-xl sm:text-2xl lg:text-3xl font-medium h-10 sm:h-12">
-              <TypewriterRole />
-            </div>
+            <p className="text-lg sm:text-xl lg:text-2xl font-medium leading-relaxed text-primary">
+              {siteConfig.title}
+            </p>
 
             {/* Description with line animation */}
             <motion.div
@@ -449,11 +402,11 @@ export function Hero() {
           className="flex justify-center mt-16 lg:mt-20"
         >
           <a
-            href="#about"
+            href="#projects"
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
           >
             <span className="text-xs tracking-[0.2em] uppercase font-medium">
-              Scroll Down
+              Explore my work
             </span>
             <motion.div
               animate={{ y: [0, 8, 0] }}

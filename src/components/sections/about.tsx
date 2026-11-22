@@ -15,8 +15,8 @@ export function About() {
       <div className="container-custom">
         <SectionHeading
           label="About Me"
-          title="Turning Data Into Intelligent Solutions"
-          description="A snapshot of who I am, what I do, and where I'm headed."
+          title="Connecting models to useful software"
+          description="The interests behind my projects and the work I want to do next."
         />
 
         <div className="grid lg:grid-cols-5 gap-12">

@@ -63,7 +63,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden xl:flex items-center gap-1">
           {navLinks.map((link) => (
             <button
               key={link.href}
@@ -92,12 +92,14 @@ export function Navbar() {
         </div>
 
         {/* Mobile controls */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex xl:hidden items-center gap-2">
           <ThemeToggle />
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className="w-9 h-9 flex items-center justify-center rounded-lg bg-muted hover:bg-muted/80 transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={isMobileOpen}
+            aria-controls="mobile-navigation"
           >
             {isMobileOpen ? (
               <X className="w-4 h-4" />
@@ -116,7 +118,8 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden glass border-t border-border/50"
+            id="mobile-navigation"
+            className="xl:hidden overflow-hidden glass border-t border-border/50"
           >
             <div className="container-custom py-4 flex flex-col gap-1">
               {navLinks.map((link) => (
