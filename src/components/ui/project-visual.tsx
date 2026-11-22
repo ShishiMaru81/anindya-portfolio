@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, ArrowRight, Camera, Database, FileSearch, Film, Layers, ScanLine, Server, ShieldCheck } from "lucide-react";
+import { ArrowDown, ArrowRight, Camera, FileSearch, Film, Layers, ScanLine, ShieldCheck } from "lucide-react";
 import type { Project } from "@/data/projects";
 
 export function ProjectVisual({ project }: { project: Project }) {
@@ -22,24 +22,29 @@ export function ProjectVisual({ project }: { project: Project }) {
       </figure>
     );
   }
+  if (project.visual === "glamnet") {
+    return (
+      <figure className="relative h-64 overflow-hidden border-b border-border bg-[#b8738b]">
+        <Image src="/images/projects/glamnet-interface.jpg" alt="GlamNet web application showing its navigation and sign-in interface" fill sizes="(max-width: 767px) 100vw, 560px" className="object-contain" />
+        <figcaption className="absolute bottom-3 right-3 rounded-full bg-background/90 px-3 py-1 text-[10px] text-foreground">GlamNet · Sign-in interface</figcaption>
+      </figure>
+    );
+  }
   const isTraffic = project.visual === "traffic";
-  const isGlamnet = project.visual === "glamnet";
   const isCinema = project.visual === "cinema";
-  const nodes = isGlamnet
-    ? [{ icon: Layers, title: "React client", text: "Customers & salon staff" }, { icon: Server, title: "Express API", text: "Auth · bookings · reviews" }, { icon: Database, title: "MongoDB", text: "Application records" }]
-    : isTraffic
+  const nodes = isTraffic
       ? [{ icon: Camera, title: "Video frames", text: "OpenCV input" }, { icon: ScanLine, title: "Two YOLO models", text: "Crashes + vehicles" }, { icon: Film, title: "Annotated video", text: "Status · count · density" }]
       : isCinema
         ? [{ icon: Film, title: "Movie metadata", text: "Titles & descriptions" }, { icon: FileSearch, title: "TF-IDF vectors", text: "Cosine similarity" }, { icon: Layers, title: "Recommendations", text: "Streamlit interface" }]
         : [{ icon: Camera, title: "Webcam / video", text: "Frame input" }, { icon: ScanLine, title: "YOLOv8 + SORT", text: "Detection & tracking" }, { icon: ShieldCheck, title: "Labelled objects", text: "Classes · IDs · confidence" }];
   return (
-    <figure className={`flex h-64 flex-col justify-center gap-6 overflow-hidden border-b border-border p-5 ${isGlamnet ? "bg-gradient-to-br from-fuchsia-500/10 via-card to-primary/10" : "bg-gradient-to-br from-sky-500/10 via-card to-primary/10"}`}>
-      <figcaption className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">{isGlamnet ? "Backend architecture" : "Pipeline overview"}</figcaption>
+    <figure className="flex h-64 flex-col justify-center gap-6 overflow-hidden border-b border-border bg-gradient-to-br from-sky-500/10 via-card to-primary/10 p-5">
+      <figcaption className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Pipeline overview</figcaption>
       <div className="flex items-start justify-between gap-2">
         {nodes.map((node, index) => (
           <div key={node.title} className="contents">
             <div className="min-w-0 flex-1 text-center">
-              <div className={`mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border ${isGlamnet && index === 1 ? "border-primary/60 bg-primary/15 text-primary" : "border-border bg-background/80 text-foreground"}`}><node.icon className="h-5 w-5" aria-hidden="true" /></div>
+              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-background/80 text-foreground"><node.icon className="h-5 w-5" aria-hidden="true" /></div>
               <p className="text-xs font-semibold leading-relaxed text-foreground">{node.title}</p>
               <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground">{node.text}</p>
             </div>
@@ -47,7 +52,7 @@ export function ProjectVisual({ project }: { project: Project }) {
           </div>
         ))}
       </div>
-      <p className="flex items-center gap-2 text-[11px] text-muted-foreground"><ArrowDown className="h-3 w-3 text-primary" aria-hidden="true" />{isGlamnet ? "My focus: backend development" : "System diagram based on repository source"}</p>
+      <p className="flex items-center gap-2 text-[11px] text-muted-foreground"><ArrowDown className="h-3 w-3 text-primary" aria-hidden="true" />System diagram based on repository source</p>
     </figure>
   );
 }

@@ -62,7 +62,7 @@ export const projects: Project[] = [
     problem: "Connect salon customers and staff through a shared booking and service-management platform.",
     contribution: "I handled backend development for the team's MERN web application.",
     challenge: "Support authenticated customer and salon workflows across appointments, services, schedules, and reviews.",
-    outcome: "The backend includes Express APIs and MongoDB models for authentication, salons, appointments, reviews, services, and schedules. The diagram highlights the backend's place in the application.",
+    outcome: "The backend includes Express APIs and MongoDB models for authentication, salons, appointments, reviews, services, and schedules. The screenshot shows the web application's sign-in interface.",
     evidence: { label: "Backend implementation", url: "https://github.com/ShishiMaru81/GlamNet/tree/main/backend" },
   },
   {
